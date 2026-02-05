@@ -56,7 +56,7 @@ export default function Projects() {
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-20">
-          <span className="inline-block mb-4 text-xs font-medium px-4 py-1 rounded-full bg-gray-100">
+          <span className="inline-block mb-4 text-xs font-medium px-4 py-1 rounded-full bg-gray-300">
             PORTFOLIO
           </span>
 
@@ -101,7 +101,7 @@ export default function Projects() {
               {featuredProject.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="text-xs px-3 py-1 rounded-full bg-gray-100"
+                  className="text-xs px-3 py-1 rounded-full bg-gray-300"
                 >
                   {tag}
                 </span>

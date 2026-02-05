@@ -6,7 +6,7 @@ export default function Hero() {
 
   useEffect(() => {
     const onScroll = () => {
-      setScrolled(window.scrollY > 80);
+      setScrolled(window.scrollY > 150);
     };
 
     window.addEventListener("scroll", onScroll);
@@ -20,9 +20,8 @@ export default function Hero() {
 
       {/* MAIN CONTENT */}
       <div
-        className={`relative z-10 max-w-7xl mx-auto px-6 transition-all duration-500 ${
-          scrolled ? "pt-24" : "pt-32"
-        }`}
+        className={`relative z-10 max-w-7xl mx-auto px-6 transition-all duration-500 ${scrolled ? "pt-24" : "pt-32"
+          }`}
       >
         {/* MAIN GRID */}
         <div className="grid gap-16 lg:grid-cols-2 items-center">
@@ -43,21 +42,41 @@ export default function Hero() {
               transform businesses.
             </p>
 
-            <div className="flex gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
               <a
                 href="#work"
-                className="inline-flex items-center gap-2 bg-white text-gray-900 px-6 py-3 rounded-full text-sm font-semibold"
+                className="inline-flex items-center justify-center gap-2
+               bg-white text-gray-900
+               w-full sm:w-auto
+               px-6 py-3
+               rounded-full text-sm font-semibold
+               shadow-md hover:shadow-xl
+               hover:bg-gray-100
+               hover:-translate-y-0.5
+               active:translate-y-0
+               transition-all duration-200"
               >
                 View Our Work <ArrowRight size={16} />
               </a>
 
               <a
                 href="#about"
-                className="inline-flex items-center gap-2 border border-white/30 px-6 py-3 rounded-full text-sm font-medium"
+                className="inline-flex items-center justify-center gap-2
+               border border-white/30 text-white
+               w-full sm:w-auto
+               px-6 py-3
+               rounded-full text-sm font-medium
+               hover:bg-white/10
+               hover:border-white/60
+               hover:-translate-y-0.5
+               shadow-sm hover:shadow-lg
+               active:translate-y-0
+               transition-all duration-200"
               >
                 <Play size={14} /> How We Work
               </a>
             </div>
+
           </div>
 
           {/* RIGHT */}
@@ -87,9 +106,8 @@ export default function Hero() {
 
         {/* STATS */}
         <div
-          className={`transition-all duration-500 ${
-            scrolled ? "mt-16" : "mt-24"
-          }`}
+          className={`transition-all duration-500 ${scrolled ? "mt-16" : "mt-24"
+            }`}
         >
           <div className="max-w-4xl mx-auto grid grid-cols-3 text-center">
             <AlignedStat value="150+" label={["Projects", "Delivered"]} />
@@ -98,13 +116,16 @@ export default function Hero() {
           </div>
         </div>
       </div>
+      <br /><br />
+      <br />
+      <br />
 
       {/* MOUSE SCROLL */}
       <div
-        className={`absolute bottom-10 left-1/2 -translate-x-1/2 transition-opacity duration-300 ${
-          scrolled ? "opacity-0" : "opacity-100"
-        }`}
+        className={`absolute bottom-10 left-1/2 -translate-x-1/2 transition-opacity duration-300 ${scrolled ? "opacity-0" : "opacity-100"
+          }`}
       >
+
         <MouseScroll />
       </div>
     </section>

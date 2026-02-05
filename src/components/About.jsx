@@ -6,7 +6,7 @@ export default function About() {
       <div className="max-w-7xl mx-auto px-6">
         {/* HEADER */}
         <div className="text-center max-w-3xl mx-auto mb-20">
-          <span className="inline-block mb-4 text-xs font-medium px-4 py-1 rounded-full bg-gray-100">
+          <span className="inline-block mb-4 text-xs font-medium px-4 py-1 rounded-full bg-gray-300">
             ABOUT SARVAJ
           </span>
 
@@ -101,10 +101,13 @@ export default function About() {
 /* STAT CARD */
 function Stat({ value, title, desc }) {
   return (
-    <div className="border rounded-xl p-6 text-center">
-      <p className="text-3xl font-bold">{value}</p>
-      <p className="text-sm font-medium mt-1">{title}</p>
-      <p className="text-xs text-gray-500 mt-2">{desc}</p>
-    </div>
+   <div className="border rounded-xl p-6 text-center 
+                shadow-lg hover:shadow-xl 
+                transition-shadow duration-300 bg-white">
+  <p className="text-3xl font-bold">{value}</p>
+  <p className="text-sm font-medium mt-1">{title}</p>
+  <p className="text-xs text-gray-500 mt-2">{desc}</p>
+</div>
+
   );
 }

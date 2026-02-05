@@ -37,7 +37,7 @@ export default function Contact() {
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-20">
-          <span className="inline-block mb-4 text-xs font-medium px-4 py-1 rounded-full bg-gray-200">
+          <span className="inline-block mb-4 text-xs font-medium px-4 py-1 rounded-full bg-gray-300">
             GET IN TOUCH
           </span>
 
@@ -53,7 +53,7 @@ export default function Contact() {
 
         <div className="grid gap-16 lg:grid-cols-2">
           {/* FORM */}
-          <div className="bg-white rounded-2xl p-8 shadow-sm">
+          <div className="bg-white rounded-2xl p-8 shadow-md">
             <form onSubmit={onSubmit} className="space-y-6">
               <div>
                 <label className="block text-sm font-medium mb-1">
@@ -155,31 +155,52 @@ export default function Contact() {
 
           {/* INFO */}
           <div className="space-y-6">
-            <InfoCard icon={Mail} title="Email Us" text="info@sarvaj.com" />
-            <InfoCard icon={Phone} title="Call Us" text="+1 (555) 123-4567" />
-            <InfoCard
-              icon={MapPin}
-              title="Visit Us"
-              text="123 Business Street, San Francisco, CA"
-            />
-            <InfoCard
-              icon={Clock}
-              title="Business Hours"
-              text="Mon–Fri: 9:00 AM – 6:00 PM"
-            />
+            <div className="transition-all duration-300 hover:-translate-y-1 hover:shadow-xl shadow-md rounded-xl">
+              <InfoCard icon={Mail} title="Email Us" text="info@sarvaj.com" />
+            </div>
 
-            <div className="bg-slate-900 rounded-2xl p-8 text-white">
+            <div className="transition-all duration-300 hover:-translate-y-1 hover:shadow-xl shadow-md rounded-xl">
+              <InfoCard icon={Phone} title="Call Us" text="+1 (555) 123-4567" />
+            </div>
+
+            <div className="transition-all duration-300 hover:-translate-y-1 hover:shadow-xl shadow-md rounded-xl">
+              <InfoCard
+                icon={MapPin}
+                title="Visit Us"
+                text="123 Business Street, San Francisco, CA"
+              />
+            </div>
+
+            <div className="transition-all duration-300 hover:-translate-y-1 hover:shadow-xl shadow-md rounded-xl">
+              <InfoCard
+                icon={Clock}
+                title="Business Hours"
+                text="Mon–Fri: 9:00 AM – 6:00 PM"
+              />
+            </div>
+
+            <div
+              className="bg-slate-900 rounded-2xl p-8 text-white
+               shadow-lg hover:shadow-2xl
+               hover:-translate-y-1
+               transition-all duration-300"
+            >
               <h3 className="text-lg font-semibold mb-2">
                 Ready to Start?
               </h3>
               <p className="text-sm text-gray-300 mb-6">
                 Book a free consultation call with our experts.
               </p>
-              <button className="bg-white text-gray-900 px-6 py-3 rounded-full text-sm font-medium">
+              <button
+                className="bg-white text-gray-900 px-6 py-3 rounded-full text-sm font-medium
+                 hover:bg-gray-200 transition"
+              >
                 Schedule Call
               </button>
             </div>
           </div>
+
+
         </div>
       </div>
     </section>
