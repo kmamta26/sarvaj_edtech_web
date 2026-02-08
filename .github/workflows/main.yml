@@ -1,13 +1,23 @@
-name: Simple CI
+name: CD Deploy to VPS (SCP)
 
-on: [push]
+on:
+  push:
+    branches:
+      - main
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
-    steps:
-      - name: Get Code
-        uses: actions/checkout@v3
 
-      - name: Run Test
-        run: echo "Code checked successfully"
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Copy files to VPS
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: 82.112.238.89
+          username: root
+          key: ${{ secrets.VPS }}
+          source: "."
+          target: "/var/www/html"
